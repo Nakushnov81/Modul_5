@@ -1,4 +1,4 @@
-class StringVar:
+'''class StringVar:
     def __init__(self, x = str(input('Введите строку: '))):
         self.x = x
 
@@ -39,6 +39,35 @@ pt.get_coord()
 
 pt.set_coord(5, 7)
 
-pt.get_coord()
+pt.get_coord()'''
 
 
+class Warrior:
+    health = 100
+    # armor =
+
+    def attack(self):
+        pass
+
+    def deffence(self):
+        pass
+
+from random import randint
+
+w1 = Warrior
+w2 = Warrior
+
+while w1.health > 10 or w2.health > 10:
+    x = randint(0, 1)
+    print(x)
+    if x == 0:
+        w1.health -= randint(1, 10)
+        print(f'Здоровье война 1: {w1.health},\nЗдоровье война 2: {w2.health}')
+    else:
+        w2.health -= randint(1, 10)
+        print(f'Здоровье война 2: {w2.health},\nЗдоровье война 1: {w1.health}')
+
+if w1.health < 10:
+    print('Воин 2 победил')
+else:
+    print('Воин 1 победил')
