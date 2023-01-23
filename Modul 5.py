@@ -1,4 +1,4 @@
-'''class StringVar:
+class StringVar:
     def __init__(self, x = str(input('Введите строку: '))):
         self.x = x
 
@@ -40,7 +40,7 @@ pt.get_coord()
 
 pt.set_coord(5, 7)
 
-pt.get_coord()'''
+pt.get_coord()
 
 
 from random import randint
