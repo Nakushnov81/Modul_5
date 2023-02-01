@@ -1,3 +1,5 @@
+import json
+from random import randint
 class StringVar:
     def __init__(self, x = str(input('Введите строку: '))):
         self.x = x
@@ -9,6 +11,7 @@ class StringVar:
     def get_str(self):
         return print(self.x)
 
+
 st = StringVar()
 
 st.get_str()
@@ -18,10 +21,10 @@ st.set_srt(input('Измените строку: '))
 st.get_str()
 
 
-
 class Point:
     color = 'red'
     size = 2
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -34,6 +37,7 @@ class Point:
         self.y = y
         return x, y
 
+
 pt = Point(2, 3)
 
 pt.get_coord()
@@ -43,14 +47,9 @@ pt.set_coord(5, 7)
 pt.get_coord()
 
 
-from random import randint
-
 class Warrior:
     def __init__(self, health = 100):
         self.health = health
-
-
-
 
 w1 = Warrior()
 w2 = Warrior()
@@ -70,3 +69,21 @@ if w1.health < 10:
 else:
     print('Воин 1 победил')
 
+
+class Model:
+    def save(self, z):
+        a = dict()
+        b = list(filter(lambda x: not x.startswith('_'), dir(C1)))
+        for i in b:
+            a[i] = getattr(z, i)
+        with open('text.json', 'w', encoding='utf-8') as file:
+            json.dump(a, file)
+
+
+class C1:
+    title = '1'
+    text = '2'
+    author = '3'
+
+x1 = Model()
+x1.save(C1)
