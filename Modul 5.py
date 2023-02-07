@@ -1,7 +1,9 @@
 import json
 from random import randint
+
+
 class StringVar:
-    def __init__(self, x = str(input('Введите строку: '))):
+    def __init__(self, x=str(input('Введите строку: '))):
         self.x = x
 
     def set_srt(self, x):
@@ -13,11 +15,8 @@ class StringVar:
 
 
 st = StringVar()
-
 st.get_str()
-
 st.set_srt(input('Измените строку: '))
-
 st.get_str()
 
 
@@ -47,13 +46,12 @@ pt.set_coord(5, 7)
 pt.get_coord()
 
 
-class Warrior:
-    def __init__(self, health = 100):
+class Warrior:     #Усложненая версия в отдельном файле Program
+    def __init__(self, health=100):
         self.health = health
 
 w1 = Warrior()
 w2 = Warrior()
-
 while w1.health > 10 and w2.health > 10:
     x = randint(0, 1)
     print(x)
@@ -84,6 +82,7 @@ class C1:
     title = '1'
     text = '2'
     author = '3'
+
 
 x1 = Model()
 x1.save(C1)
